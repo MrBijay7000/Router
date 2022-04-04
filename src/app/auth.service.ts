@@ -1,8 +1,8 @@
 export class AuthServive {
   loggedIn = false;
 
-  isAuthenticated() {
-    const promise = new Promise((resolve, reject) => {
+  isAuthenticated(): Promise<boolean> {
+    const promise: Promise<boolean> = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(this.loggedIn);
       }, 800);
